@@ -35,7 +35,7 @@ def main(event):
           for workflow in email_workflows:
             if not ("❌" in workflow or "🔴" in workflow or "🚧" in workflow or "📥" in workflow):
               active_workflows_using_this_email.append(workflow)
-        if (len(active_workflows_using_this_email) > 0 and email_type == "AUTOMATED_EMAIL") or (len(active_workflows_using_this_email) > 0 and email_type == "AUTOMATED_AB_EMAIL") or (len(email_workflows) == 0 and email_type not in automated_email_types): #need to fix this
+        if (len(active_workflows_using_this_email) > 0 and email_type == "AUTOMATED_EMAIL") or (len(active_workflows_using_this_email) > 0 and email_type == "AUTOMATED_AB_EMAIL") or (len(email_workflows) == 0 and email_type not in automated_email_types): 
           if email_type not in excluded_types:
             if email_is_published:
               if sender_email_address == user_email_address:
